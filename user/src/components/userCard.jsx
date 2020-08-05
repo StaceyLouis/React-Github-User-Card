@@ -1,9 +1,9 @@
 import React from 'react'
-
+import '../App.css'
 function UserCard (props) {
     console.log(props)
     return(
-        <div>
+        <div className="profile-wrap">
             <h1>{props.profile.login}</h1>
     <img src={props.profile.avatar_url} />
     <p>{props.profile.bio || 'bios are lame'}</p>

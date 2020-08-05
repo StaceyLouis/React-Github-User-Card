@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css'
 
 function Followers (props) {
     return(
@@ -6,10 +7,17 @@ function Followers (props) {
 {
     props.profile.map(item =>{
     return <div className="follower-card" key={item.id}>
-        <p>{item.login}</p> 
-        <img src={item.avatar_url}/>
+        <div className="parent">
+            <div>
+            <img src={item.avatar_url}/>
+           </div>
+           <div>
+        <h1>{item.login}</h1> 
+    
     <p>{item.login}'s<a href={item.repos_url}> Work</a></p>
     <p>{item.bio}</p>
+    </div>
+    </div>
         </div>
     })
 }
